@@ -15,6 +15,8 @@ app.locals.allSpeakers = dataFile.speakers;
 //use the external routes 
 app.use(require('./routes/index'));
 app.use(require('./routes/speakers'));
+app.use(require('./routes/feedback'));
+app.use(require('./routes/api'));
 //use shared folder as static 
 app.use(express.static('app/public'))
 var server = app.listen(app.get('port'),function(){
